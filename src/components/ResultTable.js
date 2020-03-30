@@ -9,15 +9,33 @@ function calculateOverallStrength(cells) {
 }
 
 class ResultTable extends React.Component {
+	constructor(props) {
+		super(props);
+	}
 	render() {
 		const { data } = this.props;
 		return (
 			<table cellSpacing={8}>
 				<thead>
 					<tr>
-						<th>Overall</th>
-						<th>Organ</th>
-						<th>Cells</th>
+						<th>
+							<span className="overall" onClick={this.props.handleClick}>
+								▲
+							</span>
+							Overall
+						</th>
+						<th>
+							<span className="organ" onClick={this.props.handleClick}>
+								▼
+							</span>
+							Organ
+						</th>
+						<th>
+							<span className="cells" onClick={this.props.handleClick}>
+								▲
+							</span>
+							Cells
+						</th>
 						<th>Antibody Staining</th>
 					</tr>
 				</thead>
@@ -36,4 +54,4 @@ class ResultTable extends React.Component {
 	}
 }
 
-export default ResultTable;
+export { ResultTable, calculateOverallStrength };

@@ -13,20 +13,22 @@
   ],
   "plugins": [
     "import",
-    "prettier"
+    "prettier",
+    "react"
+
   ],
   "parserOptions": {
     "sourceType": "module"
   },
 	"rules": {
     "indent": ["error", "tab"],
-		"linebreak-style": ["error", "unix"],
+		"linebreak-style": ["error", "windows"],
 		"quotes": ["error", "single"],
 		"semi": ["error", "always"],
     "prettier/prettier": "error",
     "comma-dangle": ["error", "never"],
-		"react/prop-types": 0
-	},
+    "react/prop-types": 0
+  },
 	"globals": {
 		"imjs": true
 	}

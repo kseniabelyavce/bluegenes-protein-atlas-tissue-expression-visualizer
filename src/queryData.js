@@ -26,7 +26,9 @@ const proteinAtlasExpressionQuery = geneId => ({
 
 function queryData(geneId, serviceUrl, imjsClient = imjs) {
 	return new Promise((resolve, reject) => {
-		const service = new imjsClient.Service({ root: serviceUrl });
+		const service = new imjsClient.Service({
+			root: 'https://www.humanmine.org/humanmine'
+		});
 		service
 			.records(proteinAtlasExpressionQuery(geneId))
 			.then(data => {
